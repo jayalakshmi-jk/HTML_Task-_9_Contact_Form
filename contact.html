@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body{
+            background-color: rgba(169, 236, 214, 0.74);
+        }
+    .container {
+        max-width: 383px;
+        background-color: white;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        }
+    .form-group {
+        display: flex;
+        gap: 15px;
+       }
+    .form-item {
+        line-height: 30px;
+       }
+    #email{
+        width: 376px;
+        height:20px;
+       }
+    .query{
+        display: flex;
+        gap: 15px;
+    }
+      input[type="text"]:hover, input[type="email"]:hover, textarea:hover,input[type="radio"]:hover {
+        border-color: #66afe9;
+        outline: none;
+        box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+      }
+    .query1{
+        height:24px;
+        border: 1px solid #020101a1;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 4px;
+        width: 174px;
+        accent-color: #2e9296;
+      }
+      .query1:has(input[type="radio"]:checked) {
+        border: 2px solid #02140a;
+        background-color:#a3ddd5;
+      }
+      button{
+        width:380px;
+        height:30px;
+      }
+      
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+    <form>
+        <div class="form-group">
+            <div class="form-item">
+             <label for="firstname">First Name</label><br>
+            <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="form-item">
+                <label for="lastname">Last Name</label><br>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+        </div>
+        <br>
+            <div class="form-item">
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" required>
+            </div><br>
+
+            <div class="form-item">
+            <label for="query">Query Type</label>
+            <div class="query">
+                <div class="query1">
+                    <input type="radio" id="inquiry" name="querytype" value="inquiry" required>
+                    <label for="inquiry">General Enquiry</label>
+                </div>
+                <div class="query1">
+                    <input type="radio" id="support" name="querytype" value="support" required>
+                    <label for="support">Support Request</label>
+                </div>
+            </div>
+            </div><br>
+            <div class="form-item">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" style="width: 376px;height: 80px;" required></textarea>
+            </div><br>
+
+            <input type="checkbox" id="cb" name="cb" required>
+            <label for="cb">I consent to being contacted by the team</label><br><br>
+        <button>Submit</button>
+    </form>
+   </div>
+</body>
+</html>
